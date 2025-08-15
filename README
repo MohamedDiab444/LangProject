@@ -15,11 +15,11 @@ Our key findings show that, contrary to our initial hypothesis, the "Driving" co
 
 ## Repository Structure
 
--   */notebooks*: Contains the Jupyter/Colab notebooks with all analyses.
+-   */Notebooks*: Contains the Jupyter/Colab notebooks with all analyses.
     -   Structured_Tasks.ipynb: Contains the code for the structured tasks, replicating and extending the work of Pereira et al. (2018).
     -   Open_Ended_Task.ipynb: Contains the code for our primary open-ended investigation using the Tuckute et al. (2024) dataset.
--   */report*: Contains the final PDF version of our project report.
--   README.md: This file.
+-   */Report*: Contains the final PDF version of our project report.
+-   README: This file.
 
 ## How to Run the Code
 
