@@ -1,0 +1,41 @@
+# Decoding and Encoding Neural Representations of Language Under Cognitive Load
+
+*Course:* 00960222 - Language, Computation and Cognition
+*Authors:* Sara Rafe, Mohamed Diab
+
+---
+
+## Project Overview
+
+This repository contains the code and final report for our class project. The project investigates how the brain's representation of language is affected by cognitive load, using fMRI data and computational models.
+
+We implement and evaluate a series of neural decoding and encoding models, comparing static (GloVe, Word2Vec) and contextual (BERT) sentence embeddings. The primary analysis uses fMRI data from Tuckute et al. (2024) to test the hypothesis that high-effort processing of nonsensical language ("Driving" condition) produces a more decodable neural signal than low-effort processing of coherent language ("Suppressing" condition).
+
+Our key findings show that, contrary to our initial hypothesis, the "Driving" condition is not decodable with a general-purpose decoder, while the "Suppressing" condition is. A layer-wise analysis of BERT reveals that decoding accuracy for coherent sentences peaks at the model's middle layers, suggesting an alignment with compositional semantic representations.
+
+## Repository Structure
+
+-   */notebooks*: Contains the Jupyter/Colab notebooks with all analyses.
+    -   Structured_Tasks.ipynb: Contains the code for the structured tasks, replicating and extending the work of Pereira et al. (2018).
+    -   Open_Ended_Task.ipynb: Contains the code for our primary open-ended investigation using the Tuckute et al. (2024) dataset.
+-   */report*: Contains the final PDF version of our project report.
+-   README.md: This file.
+
+## How to Run the Code
+
+The notebooks were developed in Google Colab and are designed to be self-contained.
+
+1.  *Open in Colab:* Open either of the .ipynb files from the /notebooks directory in Google Colab.
+2.  *Run Setup Cell:* The first cell in each notebook handles the complete environment setup. It will uninstall default libraries and install the specific, pinned versions required for this project (numpy, torch, transformers, etc.).
+3.  *Restart Runtime:* After the setup cell completes, you *must* restart the Colab runtime (Runtime -> Restart runtime).
+4.  *Run Subsequent Cells:* After restarting, you can run the remaining cells in order. The notebooks will automatically download all necessary datasets from public repositories.
+
+## Key Dependencies
+
+The project relies on the following key Python libraries. The setup cells will install these specific versions:
+-   numpy==1.26.4
+-   scipy==1.10.1
+-   transformers==4.35.2
+-   torch==2.1.0
+-   scikit-learn==1.4.2
+-   gensim==4.3.1
